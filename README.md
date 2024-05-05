@@ -115,13 +115,17 @@ Team experimented and optimized three models:
   
   <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
 
+   - Find the code for this model in "[linear_regression_model_FINAL.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/linear_regression_model_FINAL.ipynb)". 
  
 - Random Forest Regression Model was tried next as it can capture non-linear relsationships between variables.
    - Optimizations were also applied to the model including:
    - Binning of "Assembly_MainPieceProductionCode" to only include the 50 most commonly used variables, as this would simfily the complexity of the model and hopefully identify a pattern to predict time per Job.
    - However, optimization and design of Random Forest Model did not result in 80% accuracy.
+   - Find the code for this model version in "[random_forest_regression_withoutestimate-FINAL.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/random_forest_regression_withoutestimate-FINAL.ipynb)"
+
     
  <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/RDM_actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
+
  
 - A revised Random Forest Model was executed again, but this time the Software Estimate time was included in model to deteremine if it would help improve accuracy.
    - Converted "Assembly_EstTotalHours_ThisLaborGroup" to seconds to ensure it aligned with actual job time field "TimeInSeconds_ThisWorkSegment".
@@ -132,24 +136,4 @@ Team experimented and optimized three models:
 ## **6. Model Selection & Analysis:**  
 The Analysis of the model 
 
-## **8. Documents Created and Updated:**
- 
-- **data_prep.ipynb** [(Link)]  
-    Contains the code of the initial ingestion of the data and initial data cleanup. 
-- **SQLite_database_creation.ipynb**  
- Contains the code to setup the database and load data into the database  contains the following new documents [(Link)]  
-    
- - **data Folder** contains the following new documents [(Link)]
-    - **AppServices_AllClaimingWorkSegments.xlsx** = initial data collection file 
-    - **combined_data.csv** = output of the initial data cleaning
-    
-
-
-- **models** contains the following new documents [(Link)]: 
-    - **claimed_time.db** = The database file 
-    - **linear_regression_model.ipynb** = regression model file  
-    - **random_forest_regression_model.ipynb** = First random forest regression optimization file
-    - **random_forest_regression_model2.ipynb** = Second random forest regression optimization file 
-- **analysis folder**  
- Contains the analysis of the model  optimization file
     
