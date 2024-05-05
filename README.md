@@ -134,7 +134,21 @@ Team experimented and optimized three models:
    - Find the code for this model version in "[random_forest_regression_withestimate-FINAL.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/regressionmodel_withestimate-FINAL.ipynb))"
  <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/RDM_withSoftware_actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
 
-## **6. Model Selection & Analysis:**  
-The Analysis of the model 
+## **6. Model Selection:**  
+Summary of Model Results:
 
+| Model | Features | Target | Model Evaluation | Model Selection |
+|-------|----------|--------|------------------|----------------|
+| Linear Regression | - ProductionControlItemID <br> - InstanceNumber <br> - MainPieceProductionCode <br> - MainPartLengthFt <br> - WeightEachLbs <br> - SurfaceAreaEachSqFt <br> - MainPartShape <br> - MainPartDimension <br> - MainPartFinishDescr <br> - TotalQuantityInJob <br> - NumSmallParts <br> - AdjustedStationName | TimeInSeconds (Actual) | R^2 Score: -2.612 <br> Mean Absolute Error: 3.853 | Not recommended |
+| Random Forest without Software Estimate | - ProductionControlItemID <br> - InstanceNumber <br> - MainPieceProductionCode <br> - MainPartLengthFt <br> - WeightEachLbs <br> - SurfaceAreaEachSqFt <br> - MainPartShape <br> - MainPartDimension <br> - MainPartFinishDescr <br> - TotalQuantityInJob <br> - NumSmallParts <br> - AdjustedStationName | TimeInSeconds (Actual) | R^2: -0.002 <br> MAE: 1465.566 | Not recommended |
+| Random Forecast with Software Estimate | - ProductionControlItemID <br> - InstanceNumber <br> - MainPieceProductionCode <br> - MainPartLengthFt <br> - WeightEachLbs <br> - SurfaceAreaEachSqFt <br> - MainPartShape <br> - MainPartDimension <br> - MainPartFinishDescr <br> - TotalQuantityInJob <br> - NumSmallParts <br> - AdjustedStationName <br> - EstTotalSeconds (from Software) | TimeInSeconds (Actual) | R^2: 0.691 <br> MAE: 1854.615 | Best option with highest accuracy score |
+
+## **7. Conclusions:** 
+- New Model does not improve upon current estimates provided by WWC Software
+ <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
+
+- Review of Feature Importance indicate Software Estimate is the top contributor to predicting job time
+- 
+ <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
+ 
     
