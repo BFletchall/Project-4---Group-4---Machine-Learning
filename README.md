@@ -131,6 +131,7 @@ Team experimented and optimized three models:
    - Converted "Assembly_EstTotalHours_ThisLaborGroup" to seconds to ensure it aligned with actual job time field "TimeInSeconds_ThisWorkSegment".
    - Included same binning strategy from first Random Forest Model design
    - Results drastically improved, with the result improving to 69% accuracy
+   - Find the code for this model version in "[random_forest_regression_withestimate-FINAL.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/regressionmodel_withestimate-FINAL.ipynb))"
  <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/RDM_withSoftware_actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
 
 ## **6. Model Selection & Analysis:**  
