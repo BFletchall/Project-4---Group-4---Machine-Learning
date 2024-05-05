@@ -143,13 +143,12 @@ Summary of Model Results:
 | Random Forest without Software Estimate | - ProductionControlItemID <br> - InstanceNumber <br> - MainPieceProductionCode <br> - MainPartLengthFt <br> - WeightEachLbs <br> - SurfaceAreaEachSqFt <br> - MainPartShape <br> - MainPartDimension <br> - MainPartFinishDescr <br> - TotalQuantityInJob <br> - NumSmallParts <br> - AdjustedStationName | TimeInSeconds (Actual) | R^2: -0.002 <br> MAE: 1465.566 | Not recommended |
 | Random Forecast with Software Estimate | - ProductionControlItemID <br> - InstanceNumber <br> - MainPieceProductionCode <br> - MainPartLengthFt <br> - WeightEachLbs <br> - SurfaceAreaEachSqFt <br> - MainPartShape <br> - MainPartDimension <br> - MainPartFinishDescr <br> - TotalQuantityInJob <br> - NumSmallParts <br> - AdjustedStationName <br> - EstTotalSeconds (from Software) | TimeInSeconds (Actual) | R^2: 0.691 <br> MAE: 1854.615 | Best option with highest accuracy score |
 
-## **6. New Model veruss current SoftWare Estimator Tool:** 
+## **6. New Model v. current Software Estimator Tool:** 
 - New Model does not improve upon current estimates provided by WWC Software
- <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
+ <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/Software_actual_vs_predicted.png" alt="Linear Regression Results" width="75%">
 
 - Review of Feature Importance indicate Software Estimate is the top contributor to predicting job time
-- 
- <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
+ <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/Top12Features.png" alt="Linear Regression Results" width="75%">
 
 ## **7. FInal Conclusions:** 
 - Model build project did not result in model with minimum of 80% accuracy
