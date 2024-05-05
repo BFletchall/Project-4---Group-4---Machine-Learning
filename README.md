@@ -143,12 +143,18 @@ Summary of Model Results:
 | Random Forest without Software Estimate | - ProductionControlItemID <br> - InstanceNumber <br> - MainPieceProductionCode <br> - MainPartLengthFt <br> - WeightEachLbs <br> - SurfaceAreaEachSqFt <br> - MainPartShape <br> - MainPartDimension <br> - MainPartFinishDescr <br> - TotalQuantityInJob <br> - NumSmallParts <br> - AdjustedStationName | TimeInSeconds (Actual) | R^2: -0.002 <br> MAE: 1465.566 | Not recommended |
 | Random Forecast with Software Estimate | - ProductionControlItemID <br> - InstanceNumber <br> - MainPieceProductionCode <br> - MainPartLengthFt <br> - WeightEachLbs <br> - SurfaceAreaEachSqFt <br> - MainPartShape <br> - MainPartDimension <br> - MainPartFinishDescr <br> - TotalQuantityInJob <br> - NumSmallParts <br> - AdjustedStationName <br> - EstTotalSeconds (from Software) | TimeInSeconds (Actual) | R^2: 0.691 <br> MAE: 1854.615 | Best option with highest accuracy score |
 
-## **7. Conclusions:** 
+## **7. New Model veruss current SoftWare Estimator Tool:** 
 - New Model does not improve upon current estimates provided by WWC Software
  <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
 
 - Review of Feature Importance indicate Software Estimate is the top contributor to predicting job time
 - 
  <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
- 
+
+## **8. FInal Conclusions:** 
+- Model build project did not result in model with minimum of 80% accuracy
+- WWC should continue to use Software Estimator Tool while the new data collection process is put in place, as the current most important factor in predicting time for jobs is the Software Estimate 
+- Once additional data is collected, ensure it reflects only completed jobs to make sure time reflect completed jobs v. jobs still in progress
+- Try the model build exercise again with updated data
+
     
