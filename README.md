@@ -42,7 +42,7 @@ We prepared the collected data by doing the following:
            
 
 ## **2. Database setup and loading**  
-setup a SQLite database using sqlalchemy and stored the cleaned data file into the database to be utilized for running the model.
+- Setup a SQLite database using sqlalchemy and stored the cleaned data file into the database to be utilized for running the model.
 
 ## **3. Data Preprocessing** 
 Some of the things that we did to Preprocess the data so that its ready for training and modeling include:
