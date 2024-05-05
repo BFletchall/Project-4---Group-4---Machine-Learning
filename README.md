@@ -37,7 +37,6 @@ We prepared the collected data by revieweing all fields available via the new WW
 | EPM_InstanceNumber                     | Instance Number - we want to find time spent per instance                                  | Yes                  |
 | TimeInSeconds_ThisWorkSegment         | Time spent per instance in seconds - no need to calculate time from start and end, it done already | Yes, this is unit of time it takes per instance. TARGET OF MODEL |
 | Assembly_EstTotalHours_ThisLaborGroup | Software Estimated time, in hours. This is what we are comparing to.                       | Yes, as this is current estimate of time being used by WWC to bid jobs, but needs to be converted to seconds. |
-| Assembly_EstTotalSeconds_ThisLaborGroup | New column created that converted "Assembly_EstTotalHours_ThisLaborGroup" to seconds.       |                      |
 | EPM_MainMark                            | Indentifer of group of ControlItemIds, which then have a group of instances                | Yes, but is a descriptor that is not necessary to model |
 | NumberWithDash                         | Project number. Unique to site/project. Will contain multiple Main Marks that have mutiple ControlItemIds which then have mutiple instances | Yes, but is a descriptor that is not necessary to model |
 | AdjustedEnd                            | Not in use, so remove                                                                     | No                   |
@@ -74,10 +73,16 @@ Run the "[data_prep.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machi
 - Setup a SQLite database using sqlalchemy and stored the cleaned data file into the database to be utilized for running the model.
 - Run the "[SQLite_database_creation.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/SQLite_database_creation.ipynb)" to generate SQLite database.
 
-## **3. Data Preprocessing** 
-Some of the things that we did to Preprocess the data so that its ready for training and modeling include:
-- Handling missing values  
-We removed rows of any values that were blank or did not provide any data values that were meaninful to the model
+## **3. Model Design, Fitting & Training** 
+We removed rows of any values that were blank or did not provide any data values that were meaninful to the model: 
+| Column to Remove                        | Reason to remove                                         
+|-----------------------------------------|----------------------------------------------|
+| EPM_MainMark                            | Descriptor of Job, not impactful variable    |
+| NumberWithDash                          | Descriptor of Job, not impactful variable    |       
+| Assembly_EstTotalHours_ThisLaborGroup    | Outcome variable we'll compare against result of new model    |     
+- EPM_MainMark
+- NumberWithDash
+- Assembly_EstTotalHours_ThisLaborGroup
 - Binning 
 We reduced the complexity of the data by categorizing data based on Assembly main piece production code by having a cut off value and grouping values that were less than 50. This helped take care of any outlier jobs that occur occasionally and may have skewed the model
 - Encoding Categorical Variables
