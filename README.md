@@ -15,28 +15,12 @@ WWC has not attempted this task before because they did not have a robust data s
  - Can a new model with a minimum of 80% accuracy be created from the current historical data? 
 - How should WWC Inc. change their bid strategy based on this data? 
 
-Below are the steps taken to setup and run the model:  
-
-- *1. Collection and Data Preparation.*
-
-- *2. Database setup and loading.*
-
-- *3. Data Preprocessing.*
-
-- *4. Feature Model Selection & Model Training.*  
-
-- *5. Model Evaluation.* 
-
-- *6. Model Interpretation and Analysis*
+Below are the steps taken to setup and run the model.   
 
 ## **1. Collection and Data Preparation**
-We prepared the collected data by doing the following:   
-- Removed unrelated columns 
-- Removed data that was confidential e.g. employee and Employee ID information 
-- Reordered columns so that the data is cohesive and makes sense
-- Grouped data to ensure analysis will be easy
-- Converted data into unified units e.g. some columns had time in hours and others had time in seconds. So changed the time to seconds so that its easy to compare the data 
-- Saved the cleaned data into a csv file "*combined_data.csv
+We prepared the collected data by revieweing all fields available via the new WWC data collection tool, and included only relevant fields. 
+
+Run the "[data_prep.ipynb]([link_to_your_page](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/data_prep.ipynb))" to generate final cleaned data file.
            
 
 ## **2. Database setup and loading**  
