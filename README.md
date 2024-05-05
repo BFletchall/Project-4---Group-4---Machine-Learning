@@ -116,7 +116,13 @@ Team experimented and optimized three models:
   <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
 
  
-- Random Forest Regression 
+- Random Forest Regression Model was tried next as it can capture non-linear relsationships between variables.
+- Optimizations were also applied to the model including:
+- Binning of "Assembly_MainPieceProductionCode" to only include the 50 most commonly used variables, as this would simfily the complexity of the model and hopefully identify a pattern to predict time per Job.
+  - However, optimization and design of Random Forest Model did not result in 80% accuracy.
+  - 
+ <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/RDM_actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
+ 
 - Random Forest Regression with Software Tool Estimate
 
 ## **6. Model Selection & Analysis:**  
