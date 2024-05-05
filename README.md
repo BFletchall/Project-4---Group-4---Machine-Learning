@@ -19,112 +19,71 @@ Team to utilize more recent historical data collected across multiple WWC jobs w
 
 Below are the steps taken to setup and run the model:  
 
+- *1. Collection and Data Preparation.*
 
+- *2. Database setup and loading.*
 
-**A.Collection and Data Preparation.**
+- *3. Data Preprocessing.*
 
-**B. Database setup and loading.**
+- *4. Feature Model Selection & Model Training.*  
 
-**C. Data Preprocessing.**
+- *5. Model Evaluation.* 
 
-**D. Feature Model Selection.**  
+- *6. Model Interpretation and Analysis*
 
-**E. Model Training.**  
-
-**F. Model Evaluation.**
-
-**G. Model Interpretation and Analysis.**
-
-
-
-## 1. Collection and Data Preparation
-
-This process involves the following items  
-- Extract and transform the crowdfunding.xlsx Excel data to create a category DataFrame that has the following columns: 
-    - Dropping unecessary columns not needed for the model  
-    - Reordered columns so that the data is cohesive and makes sense
-    - Grouped data to ensure analysis will be easy
-    - Saved the cleaned data into a csv file "*combined_data.csv
-
-    -   A 
-    -   E
-
-- E
-
-    - A 
-
-    - A 
-        
+## **1. Collection and Data Preparation**
+We prepared the collected data by doing the following:   
+- Removed unrelated columns 
+- Removed data that was confidential e.g. employee and Employee ID information 
+- Reordered columns so that the data is cohesive and makes sense
+- Grouped data to ensure analysis will be easy
+- Converted data into unified units e.g. some columns had time in hours and others had time in seconds. So changed the time to seconds so that its easy to compare the data 
+- Saved the cleaned data into a csv file "*combined_data.csv
+           
 
 ## **2. Database setup and loading**  
-
-This involves the following steps:  
-- Extract and transform the crowdfunding.xlsx Excel data to create a campaign DataFrame has the following columns:
-
-    - T
-
-    - T
-
-    - T
-
-    - T
-
-     
+setup a SQLite database using sqlalchemy and stored the cleaned data file into the database to be utilized for running the model.
 
 ## **3. Data Preprocessing** 
+Some of the things that we did to Preprocess the data so that its ready for training and modeling include:
+- Handling missing values  
+We removed rows of any values that were blank or did not provide any data values that were meaninful to the model
+- Binning 
+We reduced the complexity of the data by categorizing data based on Assembly main piece production code by having a cut off value and grouping values that were less than 50. This helped take care of any outlier jobs that occur occasionally and may have skewed the model
+- Encoding Categorical Variables
+We used the get dummies to ensure all the data was in trainable format to encode them.   
+- Train test splitting was done to the data so that the model can have training and testing data  
 
+## **4. Feature Model Selection & Model Training**  
+- We used several models to determine the best model for the data i.e.  
+    - Linear regression
+    - Random Forest Regression Modeling
+    - Random Forest Classifier
 
-Get dummies The team chose the following option for analysis and below are the steps taken for the analysis:  
+## **5. Model Evaluation:**  
+We used several ways of evaluating the model for accuracy:  
+- Random Forest Classifier accuracy 
+- Random Forest Regression Score
+- Random Forest Mean Absolute Error
+- Confusion Matrix
 
-- **Option 1:** Use Python dictionary methods  
-    - Import the contacts.xlsx file into a DataFrame.   
-    - Iterate through the DataFrame, converting each row to a dictionary. 
-    - Iterate through each dictionary, doing the following:    
-        - Extract the dictionary values from the keys by using a Python list comprehension.  
-        - Add the values for each row to a new list.
+## **6. Model Intepretation & Analysis:**  
+The Analysis of the model 
 
-    - Create a new DataFrame that contains the extracted data.  
-    - Split each "name" column value into a first and last name, and place each in a new column.
-    - Clean and export the DataFrame as contacts.csv and save it to your GitHub repository.  
-
-## **4. Feature Model Selection**  
-
-This involves the following steps:  
--   Inspect the four CSV files, and then sketch an ERD of the tables by using QuickDBDLinks to an external site..
-
--   Use the information from the ERD to create a table schema for each CSV file.
--   Save the database schema as a Postgres file named crowdfunding_db_schema.sql, and save it to your GitHub repository.
-
--   Create a new Postgres database, named crowdfunding_db.
-
--   Using the database schema, create the tables in the correct order to handle the foreign keys.
-
--   Verify the table creation by running a SELECT statement for each table.
-
--   Import each CSV file into its corresponding SQL table.
-
--   Verify that each table has the correct data by running a SELECT statement for each.
-
-## **5. Model Training:**  
-Model 
-## **6. Model Evaluation:**  
-Evaluation
-## **7. Model Intepretation & Analysis:**  
-Analysis 
 ## **8. Documents Created and Updated:**
  
-- **data_prep.ipynb** [(Link)](https://github.com/manuel-sosa/Crowdfunding_ETL/blob/main/ETL_Mini_Project_Starter_Code-LJepkorir_MSosa_COMBINED.ipynb)  
+- **data_prep.ipynb** [(Link)]  
     Contains the code of the initial ingestion of the data and initial data cleanup. 
 - **SQLite_database_creation.ipynb**  
- Contains the code to setup the database and load data into the database  contains the following new documents [(Link)](https://github.com/manuel-sosa/Crowdfunding_ETL/tree/main/Resources):  
+ Contains the code to setup the database and load data into the database  contains the following new documents [(Link)]  
     
- - **data Folder** contains the following new documents [(Link)](https://github.com/manuel-sosa/Crowdfunding_ETL/tree/main/Resources):
+ - **data Folder** contains the following new documents [(Link)]
     - **AppServices_AllClaimingWorkSegments.xlsx** = initial data collection file 
     - **combined_data.csv** = output of the initial data cleaning
     
 
 
-- **models** contains the following new documents [(Link)](https://github.com/manuel-sosa/Crowdfunding_ETL/tree/main/Database): 
+- **models** contains the following new documents [(Link)]: 
     - **claimed_time.db** = The database file 
     - **linear_regression_model.ipynb** = regression model file  
     - **random_forest_regression_model.ipynb** = First random forest regression optimization file
