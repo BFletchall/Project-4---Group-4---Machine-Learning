@@ -74,13 +74,31 @@ Run the "[data_prep.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machi
 - Run the "[SQLite_database_creation.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/SQLite_database_creation.ipynb)" to generate SQLite database.
 
 ## **3. Model Design, Fitting & Training** 
-We removed rows of any values that were blank or did not provide any data values that were meaninful to the model: 
+We removed rows of any values that were blank or did not provide any data values that were meaninful to the model. 
 
 | Column to Remove                        | Reason to remove                                         
 |-----------------------------------------|----------------------------------------------|
 | EPM_MainMark                            | Descriptor of Job, not impactful variable    |
 | NumberWithDash                          | Descriptor of Job, not impactful variable    |       
 | Assembly_EstTotalHours_ThisLaborGroup    | Outcome variable we'll compare against result of new model    |     
+
+Featues & Target values were selected for the model:
+
+| Column Included in Model                | Target or Feature?                                       
+|-----------------------------------------|---------------------|
+| EPM_ProductionControlItemID             | Feature             |
+| EPM_InstanceNumber                  | Feature             |
+| Assembly_MainPieceProductionCode     | Feature             |
+| Assembly_MainPartLengthFt          | Feature             |
+| Assembly_WeightEachLbs             | Feature             |
+| Assembly_SurfaceAreaEachSqFt        | Feature             |
+| Assembly_MainPartShape               | Feature             |
+| Assembly_MainPartDimension           | Feature             |
+| Assembly_MainPartFinishDescr          | Feature             |
+| Assembly_TotalQuantityInJob          | Feature             |
+| Assembly_NumSmallParts                | Feature             |
+| EPM_AdjustedStationName                 | Feature             |           
+| TimeInSeconds_ThisWorkSegment          | Target          |
 
 Additional Model prep steps included:
 - Encoding Categorical Variables
