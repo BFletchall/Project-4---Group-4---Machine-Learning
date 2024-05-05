@@ -108,7 +108,7 @@ We used the get dummies to ensure all the data was in trainable format to encode
 
 Find this work in lines 1 to 15 of "[linear_regression_model_FINAL.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/linear_regression_model_FINAL.ipynb)". 
 
-## **5. Model, Build Evaluation & Optimizations:**  
+## **4. Model, Build Evaluation & Optimizations:**  
 Team experimented and optimized three models:
 
 - Linear Regression Model was executed, but data was found to have no linear relationship.
@@ -134,7 +134,7 @@ Team experimented and optimized three models:
    - Find the code for this model version in "[random_forest_regression_withestimate-FINAL.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/regressionmodel_withestimate-FINAL.ipynb))"
  <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/RDM_withSoftware_actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
 
-## **6. Model Selection:**  
+## **5. Model Selection:**  
 Summary of Model Results:
 
 | Model | Features | Target | Model Evaluation | Model Selection |
@@ -143,7 +143,7 @@ Summary of Model Results:
 | Random Forest without Software Estimate | - ProductionControlItemID <br> - InstanceNumber <br> - MainPieceProductionCode <br> - MainPartLengthFt <br> - WeightEachLbs <br> - SurfaceAreaEachSqFt <br> - MainPartShape <br> - MainPartDimension <br> - MainPartFinishDescr <br> - TotalQuantityInJob <br> - NumSmallParts <br> - AdjustedStationName | TimeInSeconds (Actual) | R^2: -0.002 <br> MAE: 1465.566 | Not recommended |
 | Random Forecast with Software Estimate | - ProductionControlItemID <br> - InstanceNumber <br> - MainPieceProductionCode <br> - MainPartLengthFt <br> - WeightEachLbs <br> - SurfaceAreaEachSqFt <br> - MainPartShape <br> - MainPartDimension <br> - MainPartFinishDescr <br> - TotalQuantityInJob <br> - NumSmallParts <br> - AdjustedStationName <br> - EstTotalSeconds (from Software) | TimeInSeconds (Actual) | R^2: 0.691 <br> MAE: 1854.615 | Best option with highest accuracy score |
 
-## **7. New Model veruss current SoftWare Estimator Tool:** 
+## **6. New Model veruss current SoftWare Estimator Tool:** 
 - New Model does not improve upon current estimates provided by WWC Software
  <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
 
@@ -151,7 +151,7 @@ Summary of Model Results:
 - 
  <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
 
-## **8. FInal Conclusions:** 
+## **7. FInal Conclusions:** 
 - Model build project did not result in model with minimum of 80% accuracy
 - WWC should continue to use Software Estimator Tool while the new data collection process is put in place, as the current most important factor in predicting time for jobs is the Software Estimate 
 - Once additional data is collected, ensure it reflects only completed jobs to make sure time reflect completed jobs v. jobs still in progress
