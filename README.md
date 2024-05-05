@@ -1,7 +1,5 @@
 # Project-4-Group-4-Machine-Learning
-<p align="center">
-  <img width="600" height="400" src="https://www.pexels.com/photo/green-and-yellow-crane-439416/">
-</p>
+![GitHub Project Image](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/constructionimage.jpg))
 
 
 ## Purpose
