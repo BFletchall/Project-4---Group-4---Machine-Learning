@@ -20,7 +20,7 @@ Below are the steps taken to setup and run the model.
 ## **1. Collection and Data Preparation**
 We prepared the collected data by revieweing all fields available via the new WWC data collection tool, and included only relevant fields. 
 
-Run the "[data_prep.ipynb]([link_to_your_page](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/data_prep.ipynb))" to generate final cleaned data file.
+Run the "[data_prep.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/data_prep.ipynb)" to generate final cleaned data file.
            
 
 ## **2. Database setup and loading**  
