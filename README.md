@@ -75,19 +75,20 @@ Run the "[data_prep.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machi
 
 ## **3. Model Design, Fitting & Training** 
 We removed rows of any values that were blank or did not provide any data values that were meaninful to the model: 
+
 | Column to Remove                        | Reason to remove                                         
 |-----------------------------------------|----------------------------------------------|
 | EPM_MainMark                            | Descriptor of Job, not impactful variable    |
 | NumberWithDash                          | Descriptor of Job, not impactful variable    |       
 | Assembly_EstTotalHours_ThisLaborGroup    | Outcome variable we'll compare against result of new model    |     
-- EPM_MainMark
-- NumberWithDash
-- Assembly_EstTotalHours_ThisLaborGroup
-- Binning 
-We reduced the complexity of the data by categorizing data based on Assembly main piece production code by having a cut off value and grouping values that were less than 50. This helped take care of any outlier jobs that occur occasionally and may have skewed the model
+
+Additional Model prep steps included:
 - Encoding Categorical Variables
-We used the get dummies to ensure all the data was in trainable format to encode them.   
-- Train test splitting was done to the data so that the model can have training and testing data  
+We used the get dummies to ensure all the data was in trainable format to encode them.
+
+- Train test splitting was done to the data so that the model can have training and testing data
+
+Find this work in lines 1 to 15 of "[linear_regression_model_FINAL.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/linear_regression_model_FINAL.ipynb)". 
 
 ## **4. Feature Model Selection & Model Training**  
 - We used several models to determine the best model for the data i.e.  
