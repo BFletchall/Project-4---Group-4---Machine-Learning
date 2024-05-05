@@ -72,6 +72,7 @@ Run the "[data_prep.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machi
 
 ## **2. Database setup and loading**  
 - Setup a SQLite database using sqlalchemy and stored the cleaned data file into the database to be utilized for running the model.
+- Run the "[SQLite_database_creation.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/SQLite_database_creation.ipynb)" to generate SQLite database.
 
 ## **3. Data Preprocessing** 
 Some of the things that we did to Preprocess the data so that its ready for training and modeling include:
