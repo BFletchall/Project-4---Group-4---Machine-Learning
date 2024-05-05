@@ -153,7 +153,7 @@ Summary of Model Results:
 ## **7. FInal Conclusions:** 
 - Model build project did not result in model with minimum of 80% accuracy
 - WWC should continue to use Software Estimator Tool while the new data collection process is put in place, as the current most important factor in predicting time for jobs is the Software Estimate 
-- Once additional data is collected, ensure it reflects only completed jobs to make sure time reflect completed jobs v. jobs still in progress
+- Once additional data is collected, ensure it reflects only completed jobs to make sure time reflects completed jobs v. jobs still in progress
 - Try the model build exercise again with updated data
 
     
