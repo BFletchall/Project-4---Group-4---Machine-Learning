@@ -1,19 +1,19 @@
 # Project-4-Group-4-Machine-Learning
-![GitHub Project Image](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/constructionimage.jpg))
+
+<img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/constructionimage.jpg" alt="GitHub Project Image" width="50%">
 
 
 ## Purpose
 
 Wonder Woman Construction Company Inc currently bids for jobs based on an industry software program that calculates time via tasks. The task times used by the software are set based on historical company data, and WWC Inc. would like to build a tool that uses their current company task time benchmarks to estimate the bids. 
 
-Team to utilize more recent historical data collected across multiple WWC jobs with actual time each task was completed. The tool build will include a model to analyze the actual task times and predict times for future jobs. WWC Inc could then estimate bids based on their current company data versus outdated historical data.  
+WWC has not attempted this task before because they did not have a robust data set of historical time spent per job. A new data collectiont tool was recently put in place at WWC, and this new data will be used to build a new model to estimate Job Times. If the new model build is successful, WWC could then estimate bids base on their current company data versus outdated historical data. 
 
  **The key questions this Analysis will answer are:**  
- - What tasks or jobs are under-estimated in terms of actual time versus bid time? 
-- What tasks or jobs are overestimated in terms of actual time versus bid time? 
+ - Is the new data collection tool able to provide enough historical data for a new model to be built?
+ - What are the most important factors for estimating job time, and is the new data collection tool able to provide it?
+ - Can a new model with a minimum of 80% accuracy be created from the current historical data? 
 - How should WWC Inc. change their bid strategy based on this data? 
-- Are there factors that impact timing that are not being considered via the estimate process? Can we find what data is used to put into the current estimate tool? 
-- Is the custom model more accurate than software estimates? HME Inc thinks they are over-estimating time for jobs. Are they right? 
 
 Below are the steps taken to setup and run the model:  
 
