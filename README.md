@@ -108,20 +108,18 @@ We used the get dummies to ensure all the data was in trainable format to encode
 
 Find this work in lines 1 to 15 of "[linear_regression_model_FINAL.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/linear_regression_model_FINAL.ipynb)". 
 
-## **4. Feature Model Selection & Model Training**  
-- We used several models to determine the best model for the data i.e.  
-    - Linear regression
-    - Random Forest Regression Modeling
-    - Random Forest Classifier
+## **5. Model, Build Evaluation & Optimizations:**  
+Team experimented and optimized three models:
 
-## **5. Model Evaluation:**  
-We used several ways of evaluating the model for accuracy:  
-- Random Forest Classifier accuracy 
-- Random Forest Regression Score
-- Random Forest Mean Absolute Error
-- Confusion Matrix
+- Linear Regression Model was executed, but data was found to have no linear relationship.
+  
+  <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
 
-## **6. Model Intepretation & Analysis:**  
+ 
+- Random Forest Regression 
+- Random Forest Regression with Software Tool Estimate
+
+## **6. Model Selection & Analysis:**  
 The Analysis of the model 
 
 ## **8. Documents Created and Updated:**
