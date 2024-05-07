@@ -5,12 +5,12 @@
 
 ## Purpose
 
-Wonder Woman Construction Company Inc currently bids for jobs based on an industry software program that calculates time via tasks. The task times used by the software are set based on historical company data, and WWC Inc. would like to build a tool that uses their current company task time benchmarks to estimate the bids. 
+Wonder Woman Construction Company Inc currently bids for jobs based on an industry software program that calculates job times via tasks. The task times used by the software are set based on historical company data (assumed to be outdated by company leadership), and WWC Inc. would like to build a tool that uses their current company task time benchmarks to estimate the bids.
 
-WWC has not attempted this task before because they did not have a robust data set of historical time spent per job. A new data collectiont tool was recently put in place at WWC, and this new data will be used to build a new model to estimate Job Times. If the new model build is successful, WWC could then estimate bids base on their current company data versus outdated historical data. 
+WWC has not attempted this task before because they did not have a robust data set of current historical time spent per job. A new data collection tool was recently put in place at WWC, and this new data will be used to build a new model to estimate Job Times. If the new model build is successful, WWC could then estimate bids base on their current company data versus outdated historical data.
 
  **The key questions this Analysis will answer are:**  
- - Is the new data collection tool able to provide enough historical data for a new model to be built?
+ - Is the new data collection tool able to provide enough current historical data for a new model to be built?
  - What are the most important factors for estimating job time, and is the new data collection tool able to provide it?
  - Can a new model with a minimum of 80% accuracy be created from the current historical data? 
 - How should WWC Inc. change their bid strategy based on this data? 
