@@ -7,7 +7,7 @@
 
 Wonder Woman Construction Company Inc currently bids for jobs based on an industry software program that calculates job times via tasks. The task times used by the software are set based on historical company data (assumed to be outdated by company leadership), and WWC Inc. would like to build a tool that uses their current company task time benchmarks to estimate the bids.
 
-WWC has not attempted this task before because they did not have a robust data set of current historical time spent per job. A new data collection tool was recently put in place at WWC, and this new data will be used to build a new model to estimate Job Times. If the new model build is successful, WWC could then estimate bids base on their current company data versus outdated historical data.
+WWC has not attempted this task before because they did not have a robust data set of current historical time spent per job. A new data collection tool was recently put in place at WWC, and this new data will be used to build a new model to estimate Job Times. If the new model build is successful, WWC could then estimate bids based on their current company data versus outdated historical data.
 
  **The key questions this Analysis will answer are:**  
  - Is the new data collection tool able to provide enough current historical data for a new model to be built?
@@ -15,10 +15,10 @@ WWC has not attempted this task before because they did not have a robust data s
  - Can a new model with a minimum of 80% accuracy be created from the current historical data? 
 - How should WWC Inc. change their bid strategy based on this data? 
 
-Below are the steps taken to setup and run the model.   
+Below are the steps taken to set up and run the model.   
 
 ## **1. Collection and Data Preparation**
-We prepared the collected data by revieweing all fields available via the new WWC data collection tool, and included only relevant fields. 
+We prepared the collected data by reviewing all fields available via the new WWC data collection tool, and included only relevant fields. 
 
 | Field                                   | Definition                                                                                | Relevant to Project? |
 |-----------------------------------------|--------------------------------------------------------------------------------------------|----------------------|
@@ -37,8 +37,8 @@ We prepared the collected data by revieweing all fields available via the new WW
 | EPM_InstanceNumber                     | Instance Number - we want to find time spent per instance                                  | Yes                  |
 | TimeInSeconds_ThisWorkSegment         | Time spent per instance in seconds - no need to calculate time from start and end, it done already | Yes, this is unit of time it takes per instance. TARGET OF MODEL |
 | Assembly_EstTotalHours_ThisLaborGroup | Software Estimated time, in hours. This is what we are comparing to.                       | Yes, as this is current estimate of time being used by WWC to bid jobs, but needs to be converted to seconds. |
-| EPM_MainMark                            | Indentifer of group of ControlItemIds, which then have a group of instances                | Yes, but is a descriptor that is not necessary to model |
-| NumberWithDash                         | Project number. Unique to site/project. Will contain multiple Main Marks that have mutiple ControlItemIds which then have mutiple instances | Yes, but is a descriptor that is not necessary to model |
+| EPM_MainMark                            | Indentifier of group of ControlItemIds, which then have a group of instances                | Yes, but is a descriptor that is not necessary to model |
+| NumberWithDash                         | Project number. Unique to site/project. Will contain multiple Main Marks that have multiple ControlItemIds which then have multiple instances | Yes, but is a descriptor that is not necessary to model |
 | AdjustedEnd                            | Not in use, so remove                                                                     | No                   |
 | AdjustedStart                          | Not in use, so remove                                                                     | No                   |
 | AS_EntityID                            | Remove                                                                                     | No                   |
@@ -74,7 +74,7 @@ Run the "[data_prep.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machi
 - Run the "[SQLite_database_creation.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/SQLite_database_creation.ipynb)" to generate SQLite database.
 
 ## **3. Model Design, Fitting & Training** 
-We removed rows of any values that were blank or did not provide any data values that were meaninful to the model. 
+We removed rows of any values that were blank or did not provide any data values that were meaningful to the model. 
 
 | Column to Remove                        | Reason to remove                                         
 |-----------------------------------------|----------------------------------------------|
@@ -82,7 +82,7 @@ We removed rows of any values that were blank or did not provide any data values
 | NumberWithDash                          | Descriptor of Job, not impactful variable    |       
 | Assembly_EstTotalHours_ThisLaborGroup    | Outcome variable we'll compare against result of new model    |     
 
-Featues & Target values were selected for the model:
+Features & Target values were selected for the model:
 
 | Column Included in Model                | Target or Feature?                                       
 |-----------------------------------------|---------------------|
@@ -117,7 +117,7 @@ Team experimented and optimized three models:
 
    - Find the code for this model in "[linear_regression_model_FINAL.ipynb](https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/linear_regression_model_FINAL.ipynb)". 
  
-- Random Forest Regression Model was tried next as it can capture non-linear relsationships between variables.
+- Random Forest Regression Model was tried next as it can capture non-linear relationships between variables.
    - Optimizations were also applied to the model including:
    - Binning of "Assembly_MainPieceProductionCode" to only include the 50 most commonly used variables, as this would simfily the complexity of the model and hopefully identify a pattern to predict time per Job.
    - However, optimization and design of Random Forest Model did not result in 80% accuracy.
@@ -127,7 +127,7 @@ Team experimented and optimized three models:
  <img src="https://github.com/BFletchall/Project-4-Group-4-Machine-Learning/blob/main/models/RDM_actual_vs_predicted.png" alt="Linear Regression Results" width="50%">
 
  
-- A revised Random Forest Model was executed again, but this time the Software Estimate time was included in model to deteremine if it would help improve accuracy.
+- A revised Random Forest Model was executed again, but this time the Software Estimate time was included in model to determine if it would help improve accuracy.
    - Converted "Assembly_EstTotalHours_ThisLaborGroup" to seconds to ensure it aligned with actual job time field "TimeInSeconds_ThisWorkSegment".
    - Included same binning strategy from first Random Forest Model design
    - Results drastically improved, with the result improving to 69% accuracy
